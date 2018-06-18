@@ -1,0 +1,52 @@
+/*!
+Theme Name: caffeeBella 
+Theme URI: github
+Author: Chomikoo
+
+Version:  1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE     
+Text Domain: 
+Tags: Photography, portfolio, trening
+*/
+ 
+
+/* --------------------------------------------------------------*/
+// # CSS VENDORS       
+// @import "vendor/core";
+// @import "vendor/animate";
+// @import "vendor/autoheight";
+
+
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "helpers/normalize";
+ 
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "helpers/variables";
+
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+// @import "helpers/mixins";    
+@import "layout/breakpoints"; 
+@import "layout/grid";
+
+/*--------------------------------------------------------------
+# Fonts 
+--------------------------------------------------------------*/
+@import "helpers/fonts";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import 'layout/general';  
+@import 'layout/buttons';  
+@import 'pages/index';  
+    
+
+                
