@@ -1,5 +1,7 @@
 body {
-	overfow-x: hidden;
+	overflow-x: hidden;
+	font-family: $f-open;
+	font-weight: $light;
 }
 
 
@@ -23,13 +25,37 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 100%;
 	font-weight: normal;
 }
+p {
+	line-height: 24px;
+}
 
+.bold {
+	font-weight: $bold;
+}
+
+
+.bg-center {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 .noScroll {
 	overflow: hidden;
 
 }
 
+.sub-title {
+	// display: inline-block;
+	margin-bottom: 40px;
+	padding: 20px 65px;
+	text-align: center;
+	text-transform: uppercase;
+	background-image: url('img/tab_border.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 .focus-only
 {

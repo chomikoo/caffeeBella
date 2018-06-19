@@ -50,7 +50,7 @@
 	    }
 	}
 
-	add_action( 'admin_head', 'hide_update_notice_to_all_but_admin_users', 1)
+	add_action( 'admin_head', 'hide_update_notice_to_all_but_admin_users', 1);
 
 
 	// remove dashicons from wp_hear
@@ -63,3 +63,58 @@
 	
 	add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
 
+
+/*-----------------------------------------------------------------------------------*/
+/* All Pages Dropdown List */
+/*-----------------------------------------------------------------------------------*/
+
+if ( !function_exists( 'admin_menu_links_to_all_edit_post_type_custom' ) ) {
+
+	function admin_menu_links_to_all_edit_post_type_custom() {
+	    if ( !is_admin() ) // Only Run if On Admin Pages
+	        return;
+
+	     $custom = 'page';  // Change this to your custom post type slug ( So for "http://www.example.com/wp-admin/edit.php?post_type=recipes" you would change this to 'recipes'  )
+
+
+
+	      // Full List of Paramaters - http://codex.wordpress.org/Template_Tags/get_posts
+	      $args = array(
+	          'orderby'          => 'modified', //Orderr by date , title , modified, etc
+	          'order'            => 'DESC', // Show most recently edited on top
+	          'post_type'        => $custom, // Post Type Slug
+	          'numberposts'      => -1,  // Number of Posts to Show (Use -1 to Show All)
+	          'post_status'      => array('publish', 'pending', 'draft', 'future', 'private', 'inherit'),
+	      );
+	      $types = get_posts( $args ); // Get All Pages
+	      foreach ($types as $post_type) {
+
+		      add_submenu_page( // add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
+		          'edit.php?post_type='.$custom
+		        , esc_attr(ucwords($post_type->post_title)) // Get title, remove bad characters, and uppercase it
+		        , esc_attr(ucwords($post_type->post_title)) // Get title, remove bad characters, and uppercase it
+		        , 'edit_posts' // Require Edit Post/Page/Custom Capability
+		        , 'post.php?post=' . $post_type->ID . '&amp;action=edit' // Get the page link by its id
+		        , '' // No function callback
+		      );    
+
+	      }
+
+	      wp_reset_postdata();
+	}
+
+	add_action('admin_menu', 'admin_menu_links_to_all_edit_post_type_custom');
+
+}
+
+	if ( !function_exists( 'admin_menu_links_to_all_edit_post_type_custom_css' ) ) {
+		
+	    function admin_menu_links_to_all_edit_post_type_custom_css() {
+		?>
+			<style type="text/css">ul#adminmenu li.wp-has-submenu > ul.wp-submenu.wp-submenu-wrap {max-height: 700px;overflow-x: hidden;}</style>
+		<?php
+
+	   }
+
+	    add_action('admin_head', 'admin_menu_links_to_all_edit_post_type_custom_css');
+	}

@@ -15,29 +15,37 @@
 	<?php } ?>
 	>
 	
-	<header id="header" class="header backgorund" style="background-image:url(<?php header_image(); ?>)">
+	<header id="header" class="header bg-center" style="background-image:url(<?php header_image(); ?>)">
 
-		<h1 class="logo">
-			
-			<a href="<?php home_url('/'); ?>" >
-				<?php if( get_theme_mod( 'chomikoo_theme_logo' ) ): ?> 
-					<img src="<?php echo get_theme_mod( 'chomikoo_theme_logo' ) ?>" class="logo__img" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-				<?php else : ?>
-					<?php bloginfo( 'name' ); ?>
-				<?php endif; ?>
-			</a>
+		<div class="header__container container">
 
-		</h1>
-<?php echo get_theme_mod( 'background_image' ) ?>
-		<nav>
-			
-			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+			<h1 class="logo">
+				
+				<a href="<?php home_url('/'); ?>" >
+					<?php if( get_theme_mod( 'chomikoo_theme_logo' ) ): ?> 
+						<img src="<?php echo get_theme_mod( 'chomikoo_theme_logo' ) ?>" class="logo__img" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+					<?php else : ?>
+						<?php bloginfo( 'name' ); ?>
+					<?php endif; ?>
+				</a>
 
-		</nav>
+			</h1>
 
-		<p class="description">
-			lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-		</p>
+			<nav class="nav">
+				
+				<?php wp_nav_menu( 
+					array( 
+						'theme_location' 	=> 'header-menu',
+						'container'			=> false,	
+						'menu_class'		=> 'nav__list',
+						) 
+				); ?>
 
+			</nav>
+
+			<p class="header__description">
+				lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+			</p>
+		</div>
 	</header>
 

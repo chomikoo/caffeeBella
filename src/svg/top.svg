@@ -1,1 +1,12 @@
-<svg id="top" data-name="Warstwa top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 247.51"><defs><style>.cls-1{fill:#fff6f9;fill-rule:evenodd;}.cls-2{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><title>top</title><path class="cls-1" d="M.5,925.15a2411.5,2411.5,0,0,0,423-3.52c303.15-29.16,334.71-90.08,549-89.13,233.25,1,273.46,73.57,579,97.34a2042.53,2042.53,0,0,0,369-4.69L1920,1080H1Z" transform="translate(-0.5 -832.49)"/><rect class="cls-2" x="1676" y="93.01" width="11" height="11"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 247.5" style="enable-background:new 0 0 1920 247.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFF6F9;}
+	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M-2.3,92.7c140.8,11.2,282.4,10,423-3.5C723.9,60,755.5-0.9,969.8,0c233.3,1,273.5,73.6,579,97.3
+	c122.9,9.6,246.4,8,369-4.7l-0.5,31.1H-1.8L-2.3,92.7"/>
+<path class="st1" d="M1676,93h11v11h-11V93z"/>
+</svg>

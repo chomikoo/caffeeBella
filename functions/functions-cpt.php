@@ -84,34 +84,3 @@ function chomikoo_init_taxonomy() {
 }
  
 
-
-
-
-
-// Show Taxonommy column in CPT
-
-// add_action('restrict_manage_posts','chomikoo_restrict_manage_posts');
-
-// function chomikoo_restrict_manage_posts() {
-//     global $typenow;
-
-//     if ($typenow=='products'){
-//                  $args = array(
-//                      'show_option_all' => "Show All Categories",
-//                      'taxonomy'        => 'your_custom_taxonomy',
-//                      'name'               => 'your_custom_taxonomy'
-
-//                  );
-//         wp_dropdown_categories($args);
-//                 }
-// }
-
-// add_action( 'request', 'my_request' );
-
-// function my_request($request) {
-//     if (is_admin() && $GLOBALS['PHP_SELF'] == '/wp-admin/edit.php' && isset($request['post_type']) && $request['post_type']=='products') {
-//         $request['term'] = get_term($request['product_type'],'product_type')->name;
-
-//     }
-//     return $request;
-// }
