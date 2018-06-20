@@ -27,6 +27,7 @@
     "gulp-strip-comments": "^2.5.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "slick-carousel": "^1.8.1"
   }
 }

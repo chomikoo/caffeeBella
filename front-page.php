@@ -3,8 +3,7 @@
 	<main>
 		
 		<section id="about" class="about">
-			<svg class="section--top" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1920 123.76"><path fill="#fff6f9" d="M0 92.66a2411.63 2411.63 0 0 0 423-3.52C726.15 60 757.71-.94 972 0c233.25 1 273.46 73.57 579 97.34a2043.29 2043.29 0 0 0 369-4.69l-.5 31.09H.5L0 92.65"/><path fill="none" stroke="#000" stroke-miterlimit="10" d="M1678.25 93h11v11h-11z"/></svg>
-
+			<svg class="section--top" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1922.3 123.71"><path fill="#fff6f9" d="M.3 113.01c140 4 282.07-10.3 422.67-23.8C726.2 60.01 757.8-.89 972.1.01c233.3 1 273.5 73.6 579 97.3 122.9 9.6 261.57 18.16 371.2 19.7v6.7H.5l-.5-31"/></svg>
 			<div class=" container">
 				<h2 class="sub-title"><?php the_field( 'o_nas_tytul' ); ?></h2>
 				<?php the_field( 'o_nas_text' ); ?>
@@ -42,8 +41,7 @@
 		</section><!-- .cupcakes -->
 
 		<section id="gallery" class="menu">
-			<svg class="section--top" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1920 123.76"><path fill="#fff6f9" d="M0 92.66a2411.63 2411.63 0 0 0 423-3.52C726.15 60 757.71-.94 972 0c233.25 1 273.46 73.57 579 97.34a2043.29 2043.29 0 0 0 369-4.69l-.5 31.09H.5L0 92.65"/><path fill="none" stroke="#000" stroke-miterlimit="10" d="M1678.25 93h11v11h-11z"/></svg>
-
+			<svg class="section--top" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1922.3 123.71"><path fill="#fff6f9" d="M.3 113.01c140 4 282.07-10.3 422.67-23.8C726.2 60.01 757.8-.89 972.1.01c233.3 1 273.5 73.6 579 97.3 122.9 9.6 261.57 18.16 371.2 19.7v6.7H.5l-.5-31"/></svg>
 			<div class=" container">
 			<h2 class="sub-title"><?php the_field( 'produkty_tytul' ); ?></h2>
 			<p class="menu__description"><?php the_field( 'produkty_tekst' ); ?></p>
@@ -61,7 +59,7 @@
 						if ($count > 0) {
 						    foreach ($terms as $term) {
 						        $i++;
-						        $class = ($i == 1) ? 'active' : '' ;
+						        $class = ($i == 1) ? 'active_tabs' : '' ;
 						        $term_list .= '<a href="#tab-'. $i .'" class="tabs__btn ' . $class . '">' . $term->name . '</a>';
 						    }
 						    echo $term_list;
@@ -85,7 +83,7 @@
 						        $i++; 
 						        ?>
 
-		        			    <div id="tab-<?php echo $i; ?>" class="tabs__content <?php echo ($i == 1) ? 'active' : '' ?>">
+		        			    <div id="tab-<?php echo $i; ?>" class="tabs__content <?php echo ($i == 1) ? 'active_tabs' : '' ?>">
 
 							        <div class="product">
 							            
@@ -108,24 +106,24 @@
 											if( $products_query ->have_posts() ) :
 												while($products_query ->have_posts() ) : $products_query->the_post(); ?>
 													<?php $item++ ?>
-													<div class="product__box " > 
-														<?php if( has_post_thumbnail() ) { ?>
+														<div class="product__box " > 
+															<?php if( has_post_thumbnail() ) { ?>
 
-															<div  style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)"  class="product__thumbnail" > </div>
-															
-														<?php } ?>
-														<h4 class="tab__title"><?php  the_title(); ?> </h4>
+																<div  style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)"  class="product__thumbnail" > </div>
+																
+															<?php } ?>
+															<h3 class="product__title"><?php  the_title(); ?> </h3>
 
-													</div>
-													
+														</div>
+
 											<?php if( !($item % 6) ) { echo '</div><div class="product">';} ?>
 												
 											<?php endwhile; endif;
 											wp_reset_postdata();
 							            ?>
 
-
 							        </div>
+
 							    </div>
 
 				        <?php
@@ -159,7 +157,7 @@
 						<div class="contact__social">
 							<a href="<?php the_field( 'instagram_link' ); ?>" class="contact__icon" ><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 512 512"><path fill="#ffffff" d="M352 0H160C71.648 0 0 71.648 0 160v192c0 88.352 71.648 160 160 160h192c88.352 0 160-71.648 160-160V160C512 71.648 440.352 0 352 0zm112 352c0 61.76-50.24 112-112 112H160c-61.76 0-112-50.24-112-112V160C48 98.24 98.24 48 160 48h192c61.76 0 112 50.24 112 112v192z"/><path fill="#ffffff" d="M256 128c-70.688 0-128 57.312-128 128s57.312 128 128 128 128-57.312 128-128-57.312-128-128-128zm0 208c-44.096 0-80-35.904-80-80 0-44.128 35.904-80 80-80s80 35.872 80 80c0 44.096-35.904 80-80 80z"/><circle cx="393.6" cy="118.4" r="17.056"/></svg>
 							</a>
-							<a href="<?php the_field( 'facebook_link' ); ?>" class="contact__icon" ><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px"><path fill="#ffffff" d="M57.378.001H3.352C1.502.001 0 1.5 0 3.353v54.026c0 1.853 1.502 3.354 3.352 3.354h29.086V37.214h-7.914v-9.167h7.914v-6.76c0-7.843 4.789-12.116 11.787-12.116 3.355 0 6.232.251 7.071.36v8.198l-4.854.002c-3.805 0-4.539 1.809-4.539 4.462v5.851h9.078l-1.187 9.166h-7.892v23.52h15.475c1.852 0 3.355-1.503 3.355-3.351V3.351C60.731 1.5 59.23.001 57.378.001z"/></svg></a>
+							<a href="<?php the_field( 'facebook_link' ); ?>" class="contact__icon" ><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 50 60"><path fill="#ffffff" d="M57.378.001H3.352C1.502.001 0 1.5 0 3.353v54.026c0 1.853 1.502 3.354 3.352 3.354h29.086V37.214h-7.914v-9.167h7.914v-6.76c0-7.843 4.789-12.116 11.787-12.116 3.355 0 6.232.251 7.071.36v8.198l-4.854.002c-3.805 0-4.539 1.809-4.539 4.462v5.851h9.078l-1.187 9.166h-7.892v23.52h15.475c1.852 0 3.355-1.503 3.355-3.351V3.351C60.731 1.5 59.23.001 57.378.001z"/></svg></a>
 						</div>
 
 					</div>

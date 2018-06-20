@@ -20,16 +20,11 @@ jQuery(function($){
 
 				e.preventDefault();
 
-				$this.siblings('a').removeClass('active');
+				$this.siblings('a').removeClass('active_tabs');
+				$this.addClass('active_tabs');
 
-				$this.addClass('active');
-
-				$target.siblings('.tabs__content').fadeOut().removeClass('active');
-				$target.fadeIn().addClass('active');
-
-
-
-
+				$target.siblings('.tabs__content').fadeOut().removeClass('active_tabs');
+				$target.fadeIn().addClass('active_tabs');
 
 			}
 

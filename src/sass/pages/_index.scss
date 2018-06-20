@@ -1,6 +1,19 @@
 //////////////////
 // INDEX
 //////////////////
+.slick-track {
+// 	width: 100% !important;
+// 	.slick-slide {
+// 		width: 100% !important;
+// 		&>div {
+// 			width: 100% !important;
+// 		}
+		.product {
+			display: flex !important;
+		}
+// 	}
+}
+
 section {
 	position: relative;
 	padding: 30px 15px;
@@ -98,7 +111,7 @@ section {
 		min-width: 100px;
 		height: auto;
 		text-align: center;
-		&.active {
+		&.active_tabs {
 			background-image: url('img/tab_border.svg');
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -110,18 +123,18 @@ section {
 	&__content {
 		display: none;
 		width: 100%;
-		&.active {
+		&.active_tabs {
 			animation: fadeIn 0.3s linear;
 			display: inline-block;
 		}
 	}
 }
-
+// .atEnd .inner { margin: 0 0 0 15px; }
 .product {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-
+	padding: 0 15px;
 	&__box {
 		width: 45%;
 		text-align: center;
@@ -137,8 +150,12 @@ section {
 
 		height: auto;
 		padding-top: 100%;
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 		// height: 100px;
+	}
+
+	&__title {
+		font-size: 18px;
 	}
 }
 
@@ -219,6 +236,8 @@ section {
 
 }
 
+// MIN WIDTH 768 px 
+
 
 @include breakpoint(md) {
 	section {
@@ -264,12 +283,38 @@ section {
 		&__thumbnail {
 			margin-bottom: 30px;
 		}
+
+		&__title {
+			font-size: 25px;
+		}
 	}
 
 	.contact {
 		padding: 120px 15px;
 		&__info {
 			padding-left: 20px;
+		}
+	}
+
+}
+
+// MIN WIDTH 1200 px 
+
+@include breakpoint(xl) {
+
+	.contact {
+		&__info {
+			padding-left: 80px;
+		}
+	}
+
+	.wpcf7-form > p {
+		label {
+			
+			top: 34px;
+			left: 15px;
+
+			font-size: 18px;
 		}
 	}
 

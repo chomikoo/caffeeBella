@@ -2,6 +2,8 @@ body {
 	overflow-x: hidden;
 	font-family: $f-open;
 	font-weight: $light;
+	line-height: 24px;
+
 }
 
 
@@ -85,5 +87,17 @@ p {
 @include breakpoint(md) {
 	.sub-title {
 		margin-bottom: 80px;
+	}
+}
+
+// MIN WIDTH 1200 px 
+
+@include breakpoint(xl) {
+
+	body {
+		font-size: 20px;
+	}
+	p {
+		line-height: 30px;
 	}
 }
