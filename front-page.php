@@ -104,11 +104,11 @@
 											);
 
 											$products_query = new WP_Query( $newargs );
-
+											$item = 0;
 											if( $products_query ->have_posts() ) :
 												while($products_query ->have_posts() ) : $products_query->the_post(); ?>
-											
-													<div class="product__box" > 
+													<?php $item++ ?>
+													<div class="product__box " > 
 														<?php if( has_post_thumbnail() ) { ?>
 
 															<div  style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)"  class="product__thumbnail" > </div>
@@ -117,6 +117,8 @@
 														<h4 class="tab__title"><?php  the_title(); ?> </h4>
 
 													</div>
+													
+											<?php if( !($item % 6) ) { echo '</div><div class="product">';} ?>
 												
 											<?php endwhile; endif;
 											wp_reset_postdata();
@@ -141,8 +143,7 @@
 			<svg class="section--bottom" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1920.5 115.01"><path fill="#fff6f9" d="M0 104.15a2411.63 2411.63 0 0 0 423-3.52C726.15 71.47 757.71 10.55 972 11.5c233.25 1 273.46 73.57 579 97.34a2043.29 2043.29 0 0 0 369-4.69L1920.5 0H.5z"/></svg>			
 		</section><!-- .menu -->
 
-		<section id="contact" class="contact" style="background:url(<?php echo BASE_URL; ?>img/blackboardbg.jpg)">
-			<!-- <svg class="section--top" data-name="Warstwa 1" viewBox="0 0 1920 123.76"><path fill="#fff6f9" d="M0 92.66a2411.63 2411.63 0 0 0 423-3.52C726.15 60 757.71-.94 972 0c233.25 1 273.46 73.57 579 97.34a2043.29 2043.29 0 0 0 369-4.69l-.5 31.09H.5L0 92.65"/><path fill="none" stroke="#000" stroke-miterlimit="10" d="M1678.25 93h11v11h-11z"/></svg> -->
+		<section id="contact" class="contact bg-center" style="background:url(<?php echo BASE_URL; ?>img/blackboardbg.jpg) ">
 			
 			<div class="container">
 				<h2 class="sub-title"><?php the_field( 'kontakt_tytul' ); ?></h2>

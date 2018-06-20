@@ -18,6 +18,7 @@ section {
 	.section--bottom {
 		top: 100%;
 	}
+
 }
 
 // ABOUT
@@ -124,7 +125,7 @@ section {
 	&__box {
 		width: 45%;
 		text-align: center;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 
 	&__thumbnail {
@@ -143,12 +144,10 @@ section {
 
 .contact {
 	width: 100%;
-	oveflow-x: hidden;
 	color: $white;
 	padding: 70px 15px;
 	.sub-title {
 		background-image: url('img/tab_border_white.svg');
-		// color: $white;
 	}
 	&__info {
 		p {
@@ -171,7 +170,11 @@ section {
 		max-width: 50px;
 		height: 50px;
 		border-radius: 20%;
-
+		opacity: 0.7;
+		transition: all .5s ease;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 
@@ -212,6 +215,62 @@ section {
 	&:focus {
 		outline-offset: 0px !important;
 		outline: none !important;
+	}
+
+}
+
+
+@include breakpoint(md) {
+	section {
+		padding: 80px 15px;
+	}
+	.about {
+		p {
+			margin-bottom: 30px;
+		}
+	}
+
+	.cupcakes {
+		padding: 130px 15px;
+	}
+
+	.menu {
+		&__description {
+			margin-bottom: 80px;
+		}
+	}
+
+	.tabs {
+		&__nav {
+			flex-direction: row;
+			justify-content: space-around;
+			margin-bottom: 80px;
+		}
+		&__btn {
+			padding: 0 40px;
+			font-size: 25px;
+		}
+
+	}
+
+
+	.product {
+
+		&__box {
+			width: 30%;
+			margin-bottom: 80px;
+		}
+
+		&__thumbnail {
+			margin-bottom: 30px;
+		}
+	}
+
+	.contact {
+		padding: 120px 15px;
+		&__info {
+			padding-left: 20px;
+		}
 	}
 
 }
