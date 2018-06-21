@@ -49,7 +49,7 @@ section {
 	padding: 70px 15px;
 	color: $white;
 	.sub-title {
-		background-image: url('img/tab_border_white.svg');
+		background-image: url('../images/tab_border_white.svg');
 	}
 	&__container {
 		position: relative;
@@ -112,7 +112,7 @@ section {
 		height: auto;
 		text-align: center;
 		&.active_tabs {
-			background-image: url('img/tab_border.svg');
+			background-image: url('../images/tab_border.svg');
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -164,7 +164,7 @@ section {
 	color: $white;
 	padding: 70px 15px;
 	.sub-title {
-		background-image: url('img/tab_border_white.svg');
+		background-image: url('../images/tab_border_white.svg');
 	}
 	&__info {
 		p {
@@ -225,7 +225,7 @@ section {
 	appearance: none;
 	background: transparent;
 	border: 5px solid rgba(255,255,255, .8);
-	border-image: url("img/answer-box.png") 20;
+	border-image: url("../images/answer-box.png") 20;
 	&:before {
 		content: '';
 	}

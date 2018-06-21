@@ -141,7 +141,7 @@
 			<svg class="section--bottom" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1920.5 115.01"><path fill="#fff6f9" d="M0 104.15a2411.63 2411.63 0 0 0 423-3.52C726.15 71.47 757.71 10.55 972 11.5c233.25 1 273.46 73.57 579 97.34a2043.29 2043.29 0 0 0 369-4.69L1920.5 0H.5z"/></svg>			
 		</section><!-- .menu -->
 
-		<section id="contact" class="contact bg-center " style="background:url(<?php echo BASE_URL; ?>img/blackboardbg.jpg) ">
+		<section id="contact" class="contact bg-center " style="background:url(<?php echo BASE_URL; ?>dist/images/blackboardbg.jpg) ">
 			
 			<div class="container reveal">
 				<h2 class="sub-title"><?php the_field( 'kontakt_tytul' ); ?></h2>

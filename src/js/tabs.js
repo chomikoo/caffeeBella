@@ -9,6 +9,7 @@ jQuery(function($){
 		const $a = $(this).find('a');
 
 		$a.on('click', function(e) {
+			console.log('click');
 
 			const $this = $(this);
 

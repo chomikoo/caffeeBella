@@ -5,7 +5,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
 	<?php wp_head(); ?>
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo BASE_URL ?>/dist/images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Sacramento&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
@@ -44,7 +44,7 @@
 			</nav>
 
 			<p class="header__description">
-				lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+				lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mag na aliqua. Ut enim ad minim veniam
 			</p>
 		</div>
 	</header>

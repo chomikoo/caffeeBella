@@ -48,7 +48,7 @@
 			
 			left: 50%;
 			transform: translateX(-50%);
-			background: url('img/header-border.png');	
+			background: url('../images/header-border.png');	
 			background-size: contain;
 			background-repeat: no-repeat;
 			height: 25px;		
@@ -90,7 +90,7 @@
 		content: '';
 		width: 100%;
 		height: 5px;
-		background: url('img/nav-border.png');
+		background: url('../images/nav-border.png');
 		background-size: cover;
 		background-repeat: no-repeat;
 		left: 0;
@@ -107,7 +107,7 @@
 // MIN WIDTH 768 px 
 
 @include breakpoint(md) {
-
+  
 	.header {
 
 		&__container {
@@ -121,7 +121,7 @@
 				top: -40px;
 			}
 			&:after {
-				bottom: -40px;
+				bottom: -41px;
 			}
 		}
 	}

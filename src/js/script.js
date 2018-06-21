@@ -1,5 +1,6 @@
 jQuery(function($){
-
+	'use strict'
+	
 	console.log('Hello from script.js');
 
 	// Init scrollreveal
@@ -15,7 +16,7 @@ jQuery(function($){
 	  .not('[href="#"]')
 	  .not('[href="#0"]')
 	  .not('[href*="#tab"]')
-	  .click(function(event) {
+	  .click(function(event) {  
 	    // On-page links
 	    if (
 	      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
@@ -58,13 +59,13 @@ jQuery(function($){
 		
 
 		$carousel.slick({
-			slidesToShow: 1,
+			slidesToShow: 1,  
 			slidesToScroll: 1,
-			arrows: false,
+			arrows: false, 
 			// adaptiveHeight: true,
-			mobileFirst: true,
+			mobileFirst: true ,
 			// variableWidth: true,
-		});
+		});  
 
 	})
 
