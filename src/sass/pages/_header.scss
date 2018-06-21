@@ -132,7 +132,7 @@
 			display: flex;
 			justify-content: space-between;
 
-			padding: 0 25px;
+			padding: 10px 25px;
 			 a {
 			 	padding: 10px 0;
 			 	font-size: 35px;
@@ -140,5 +140,16 @@
 
 		}
 
+	}
+}
+
+// MIN WIDTH 1200 px 
+
+@include breakpoint(xl) {
+
+	.logo {
+		&__img {
+			width: 270px;
+		}
 	}
 }

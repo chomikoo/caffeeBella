@@ -29,5 +29,8 @@
     "gulp-util": "^3.0.8",
     "run-sequence": "^2.2.1",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "scrollreveal": "^3.4.0"
   }
 }

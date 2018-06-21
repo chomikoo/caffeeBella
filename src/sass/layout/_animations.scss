@@ -12,3 +12,14 @@
 		margin-top: 0px;
 	}
 }
+
+@keyframes animateIn {
+	from {
+		opacity: 0.2;
+		margin-bottom: 15px;
+	}
+	to {
+		opacity: 1;
+		margin-bottom: 0px;
+	}
+}

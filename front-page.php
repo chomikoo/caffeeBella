@@ -2,9 +2,9 @@
 
 	<main>
 		
-		<section id="about" class="about">
+		<section id="about" class="about ">
 			<svg class="section--top" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1922.3 123.71"><path fill="#fff6f9" d="M.3 113.01c140 4 282.07-10.3 422.67-23.8C726.2 60.01 757.8-.89 972.1.01c233.3 1 273.5 73.6 579 97.3 122.9 9.6 261.57 18.16 371.2 19.7v6.7H.5l-.5-31"/></svg>
-			<div class=" container">
+			<div class="container reveal">
 				<h2 class="sub-title"><?php the_field( 'o_nas_tytul' ); ?></h2>
 				<?php the_field( 'o_nas_text' ); ?>
 			</div>
@@ -12,7 +12,7 @@
 		</section><!-- .about -->
 
 		<section id="cupcakes" class="cupcakes bg-center" style="background-image:url(<?php the_field( 'cupcakes_bg' ); ?>)">
-			<div class="cupcakes__container container">
+			<div class="cupcakes__container container reveal">
 				<h2 class="sub-title"><?php the_field( 'nasze_wypieki_tytul' ); ?></h2>
 				<div class="row">
 					<div class="cupcakes__card col-12 col-md-4 ">
@@ -40,9 +40,9 @@
 
 		</section><!-- .cupcakes -->
 
-		<section id="gallery" class="menu">
+		<section id="menu" class="menu">
 			<svg class="section--top" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1922.3 123.71"><path fill="#fff6f9" d="M.3 113.01c140 4 282.07-10.3 422.67-23.8C726.2 60.01 757.8-.89 972.1.01c233.3 1 273.5 73.6 579 97.3 122.9 9.6 261.57 18.16 371.2 19.7v6.7H.5l-.5-31"/></svg>
-			<div class=" container">
+			<div class=" container reveal">
 			<h2 class="sub-title"><?php the_field( 'produkty_tytul' ); ?></h2>
 			<p class="menu__description"><?php the_field( 'produkty_tekst' ); ?></p>
 
@@ -141,9 +141,9 @@
 			<svg class="section--bottom" xmlns="http://www.w3.org/2000/svg" data-name="Warstwa 1" viewBox="0 0 1920.5 115.01"><path fill="#fff6f9" d="M0 104.15a2411.63 2411.63 0 0 0 423-3.52C726.15 71.47 757.71 10.55 972 11.5c233.25 1 273.46 73.57 579 97.34a2043.29 2043.29 0 0 0 369-4.69L1920.5 0H.5z"/></svg>			
 		</section><!-- .menu -->
 
-		<section id="contact" class="contact bg-center" style="background:url(<?php echo BASE_URL; ?>img/blackboardbg.jpg) ">
+		<section id="contact" class="contact bg-center " style="background:url(<?php echo BASE_URL; ?>img/blackboardbg.jpg) ">
 			
-			<div class="container">
+			<div class="container reveal">
 				<h2 class="sub-title"><?php the_field( 'kontakt_tytul' ); ?></h2>
 				<div class="row">
 					<div class="col-12 col-md-6">

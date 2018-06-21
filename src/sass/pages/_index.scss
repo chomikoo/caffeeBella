@@ -236,6 +236,15 @@ section {
 
 }
 
+.footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	padding: 5px 0;
+	// left: 50%;
+	// transform: transateX(-50%);
+}
 // MIN WIDTH 768 px 
 
 
@@ -266,7 +275,7 @@ section {
 			margin-bottom: 80px;
 		}
 		&__btn {
-			padding: 0 40px;
+			padding: 10px 40px;
 			font-size: 25px;
 		}
 
@@ -302,11 +311,22 @@ section {
 
 @include breakpoint(xl) {
 
+	.product {
+
+		&__thumbnail {
+			margin-bottom: 60px;
+		}
+
+	
+	}
+
 	.contact {
 		&__info {
 			padding-left: 80px;
 		}
 	}
+
+
 
 	.wpcf7-form > p {
 		label {
